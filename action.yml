@@ -1,6 +1,6 @@
 name: 'RoleCraft Action'
 description: 'Install and verify AI agent skills in CI with rolecraft'
-author: 'Samet ÇELİKBIÇAK'
+author: 'rolecraft-sh'
 branding:
   icon: 'terminal'
   color: 'blue'

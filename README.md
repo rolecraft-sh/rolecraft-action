@@ -1,18 +1,18 @@
 <p align="center">
-  <img src="https://github.com/sametcelikbicak/rolecraft/raw/main/assets/rolecraft_logo.png" width="120" height="120" alt="RoleCraft">
+  <img src="https://github.com/rolecraft-sh/rolecraft/raw/main/assets/rolecraft_logo.png" width="120" height="120" alt="RoleCraft">
 </p>
 
 <h1 align="center">rolecraft-action</h1>
 
 <p align="center">
-  <a href="https://github.com/sametcelikbicak/rolecraft-action/actions"><img src="https://github.com/sametcelikbicak/rolecraft-action/actions/workflows/test.yml/badge.svg" alt="Test"></a>
+  <a href="https://github.com/rolecraft-sh/rolecraft-action/actions"><img src="https://github.com/rolecraft-sh/rolecraft-action/actions/workflows/test.yml/badge.svg" alt="Test"></a>
   <a href="https://github.com/marketplace/actions/rolecraft-action"><img src="https://img.shields.io/badge/GitHub-Marketplace-blue?logo=github" alt="Marketplace"></a>
-  <a href="https://github.com/sametcelikbicak/rolecraft"><img src="https://img.shields.io/badge/powered%20by-rolecraft-2ea44f" alt="Powered by rolecraft"></a>
+  <a href="https://github.com/rolecraft-sh/rolecraft"><img src="https://img.shields.io/badge/powered%20by-rolecraft-2ea44f" alt="Powered by rolecraft"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-green" alt="MIT"></a>
 </p>
 
 <p align="center">
-  Install and verify AI agent skills in CI with <a href="https://github.com/sametcelikbicak/rolecraft">rolecraft</a>.
+  Install and verify AI agent skills in CI with <a href="https://github.com/rolecraft-sh/rolecraft">rolecraft</a>.
 </p>
 
 ---
@@ -30,7 +30,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-      - uses: sametcelikbicak/rolecraft-action@v1
+      - uses: rolecraft-sh/rolecraft-action@v1
         with:
           command: ci --yes
 ```
@@ -47,7 +47,7 @@ jobs:
 ### Verify skill integrity
 
 ```yaml
-- uses: sametcelikbicak/rolecraft-action@v1
+- uses: rolecraft-sh/rolecraft-action@v1
   with:
     command: verify
 ```
@@ -55,7 +55,7 @@ jobs:
 ### Dry-run install a skill
 
 ```yaml
-- uses: sametcelikbicak/rolecraft-action@v1
+- uses: rolecraft-sh/rolecraft-action@v1
   with:
     command: install user/repo --dry-run
 ```
@@ -63,7 +63,7 @@ jobs:
 ### Run system health check
 
 ```yaml
-- uses: sametcelikbicak/rolecraft-action@v1
+- uses: rolecraft-sh/rolecraft-action@v1
   with:
     command: doctor
 ```
@@ -71,7 +71,7 @@ jobs:
 ### Specific version
 
 ```yaml
-- uses: sametcelikbicak/rolecraft-action@v1
+- uses: rolecraft-sh/rolecraft-action@v1
   with:
     command: ci --yes
     version: 1.6.0
@@ -86,7 +86,7 @@ node index.js
 
 ## Related
 
-- [rolecraft](https://github.com/sametcelikbicak/rolecraft) — the CLI that powers this action
+- [rolecraft](https://github.com/rolecraft-sh/rolecraft) — the CLI that powers this action
 
 ## License
 
