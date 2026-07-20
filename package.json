@@ -1,0 +1,7 @@
+{
+  "name": "rolecraft-action",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "GitHub Action for rolecraft — install and verify AI agent skills in CI"
+}

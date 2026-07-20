@@ -1,0 +1,17 @@
+name: 'RoleCraft Action'
+description: 'Install and verify AI agent skills in CI with rolecraft'
+author: 'Samet ÇELİKBIÇAK'
+branding:
+  icon: 'terminal'
+  color: 'blue'
+inputs:
+  command:
+    description: 'RoleCraft command to run (e.g. "ci --yes", "verify", "doctor", "install user/repo --dry-run")'
+    required: true
+  version:
+    description: 'RoleCraft version to use (e.g. "latest", "1.6.0")'
+    required: false
+    default: 'latest'
+runs:
+  using: 'node20'
+  main: 'index.js'
