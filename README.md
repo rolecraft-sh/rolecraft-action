@@ -4,7 +4,7 @@
 
 <h1 align="center">rolecraft-action</h1>
 
-<table><tr>
+<table border="0" cellpadding="0" cellspacing="0" align="center"><tr>
 <td><a href="https://github.com/rolecraft-sh/rolecraft-action/actions"><img src="https://github.com/rolecraft-sh/rolecraft-action/actions/workflows/test.yml/badge.svg" alt="Test"></a></td>
 <td><a href="https://github.com/marketplace/actions/rolecraft-action"><img src="https://img.shields.io/badge/GitHub-Marketplace-blue?logo=github" alt="Marketplace"></a></td>
 <td><a href="https://github.com/rolecraft-sh/rolecraft"><img src="https://img.shields.io/badge/powered%20by-rolecraft-2ea44f" alt="Powered by rolecraft"></a></td>
