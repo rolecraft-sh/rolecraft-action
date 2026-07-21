@@ -4,7 +4,12 @@
 
 <h1 align="center">rolecraft-action</h1>
 
-[![Test](https://github.com/rolecraft-sh/rolecraft-action/actions/workflows/test.yml/badge.svg)](https://github.com/rolecraft-sh/rolecraft-action/actions) [![Marketplace](https://img.shields.io/badge/GitHub-Marketplace-blue?logo=github)](https://github.com/marketplace/actions/rolecraft-action) [![Powered by rolecraft](https://img.shields.io/badge/powered%20by-rolecraft-2ea44f)](https://github.com/rolecraft-sh/rolecraft) [![MIT](https://img.shields.io/badge/license-MIT-green)](LICENSE)
+<table><tr>
+<td><a href="https://github.com/rolecraft-sh/rolecraft-action/actions"><img src="https://github.com/rolecraft-sh/rolecraft-action/actions/workflows/test.yml/badge.svg" alt="Test"></a></td>
+<td><a href="https://github.com/marketplace/actions/rolecraft-action"><img src="https://img.shields.io/badge/GitHub-Marketplace-blue?logo=github" alt="Marketplace"></a></td>
+<td><a href="https://github.com/rolecraft-sh/rolecraft"><img src="https://img.shields.io/badge/powered%20by-rolecraft-2ea44f" alt="Powered by rolecraft"></a></td>
+<td><a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-green" alt="MIT"></a></td>
+</tr></table>
 
 <p align="center">
   Install and verify AI agent skills in CI with <a href="https://github.com/rolecraft-sh/rolecraft">rolecraft</a>.
