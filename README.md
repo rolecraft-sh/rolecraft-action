@@ -38,8 +38,11 @@ This installs `rolecraft` from npm and runs `rolecraft ci --yes` — which resol
 
 | Input | Required | Default | Description |
 |-------|----------|---------|-------------|
-| `command` | ✅ | — | RoleCraft command to run (e.g. `ci --yes`, `verify`, `doctor`, `install user/repo --dry-run`) |
+| `command` | ❌ | — | RoleCraft command to run (e.g. `ci --yes`, `verify`, `doctor`). Ignored when `script` is provided. |
+| `script` | ❌ | — | Shell script to run with rolecraft pre-installed. Alternative to `command` — use for dynamic/multi-step workflows. |
 | `version` | ❌ | `latest` | RoleCraft version to install (`latest`, `1.6.0`, `2.0.0`, etc.) |
+
+> **Security:** Do not pass untrusted data (PR titles, body, labels) to `command` or `script` inputs. Both execute arbitrary code.
 
 ## Examples
 
@@ -68,6 +71,22 @@ Fail the build if any installed skill has been tampered with or has hash mismatc
 - uses: rolecraft-sh/rolecraft-action@v1
   with:
     command: install user/repo --dry-run
+```
+
+### Run a custom validation script
+
+Use `script` for dynamic workflows — rolecraft is pre-installed and available:
+
+```yaml
+- uses: rolecraft-sh/rolecraft-action@v1
+  env:
+    SKILLS: "code-review,tdd,security"
+  with:
+    script: |
+      IFS=',' read -ra SKILL_LIST <<< "$SKILLS"
+      for skill in "${SKILL_LIST[@]}"; do
+        rolecraft install "my-org/my-skills" --skill "$skill" --dry-run --yes
+      done
 ```
 
 ### Run system health check
