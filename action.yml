@@ -6,8 +6,11 @@ branding:
   color: 'blue'
 inputs:
   command:
-    description: 'RoleCraft command to run (e.g. "ci --yes", "verify", "doctor", "install user/repo --dry-run")'
-    required: true
+    description: 'RoleCraft command to run (e.g. "ci --yes", "verify"). Ignored when script is provided. Do NOT pass untrusted data like PR titles/body.'
+    required: false
+  script:
+    description: 'Shell script to run with rolecraft pre-installed. Alternative to command — when provided, command is ignored. Do NOT pass untrusted data like PR titles/body.'
+    required: false
   version:
     description: 'RoleCraft version to use (e.g. "latest", "1.6.0")'
     required: false
