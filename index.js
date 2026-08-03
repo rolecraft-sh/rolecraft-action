@@ -1,4 +1,4 @@
-import { execSync } from 'node:child_process'
+import { execSync, execFileSync } from 'node:child_process'
 
 const command = process.env.INPUT_COMMAND
 const version = process.env.INPUT_VERSION || 'latest'
@@ -13,14 +13,17 @@ if (!command && !script) {
 
 try {
 	console.log(`⚙️ rolecraft-action: installing rolecraft@${version}...`)
-	execSync(`npm install -g rolecraft@${version}`, { stdio: 'inherit' })
+	execFileSync('npm', ['install', '-g', `rolecraft@${version}`], {
+		stdio: 'inherit',
+	})
 
 	if (script) {
 		console.log('⚙️ rolecraft-action: running script...')
+		// script input intentionally uses shell features (IFS, loops, etc.)
 		execSync(script, { stdio: 'inherit', shell: '/bin/bash' })
 	} else {
 		console.log(`⚙️ rolecraft-action: running "rolecraft ${command}"...`)
-		execSync(`npx rolecraft ${command}`, { stdio: 'inherit' })
+		execFileSync('npx', ['rolecraft', command], { stdio: 'inherit' })
 	}
 
 	console.log('✅ rolecraft-action completed successfully.')
