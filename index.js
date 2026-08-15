@@ -1,4 +1,5 @@
 import { execSync, execFileSync } from 'node:child_process'
+import { splitCommand } from './split-command.js'
 
 const command = process.env.INPUT_COMMAND
 const version = process.env.INPUT_VERSION || 'latest'
@@ -23,7 +24,9 @@ try {
 		execSync(script, { stdio: 'inherit', shell: '/bin/bash' })
 	} else {
 		console.log(`⚙️ rolecraft-action: running "rolecraft ${command}"...`)
-		execFileSync('npx', ['rolecraft', command], { stdio: 'inherit' })
+		// Split command string into argv, respecting quoted strings
+		const argv = splitCommand(command)
+		execFileSync('npx', ['rolecraft', ...argv], { stdio: 'inherit' })
 	}
 
 	console.log('✅ rolecraft-action completed successfully.')

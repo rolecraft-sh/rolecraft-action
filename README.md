@@ -38,7 +38,7 @@ This installs `rolecraft` from npm and runs `rolecraft ci --yes` — which resol
 
 | Input | Required | Default | Description |
 |-------|----------|---------|-------------|
-| `command` | ❌ | — | RoleCraft command to run (e.g. `ci --yes`, `verify`, `doctor`). Ignored when `script` is provided. |
+| `command` | ❌ | — | RoleCraft command to run (e.g. `ci --yes`, `verify`, `doctor`). Multi-word commands and quoted arguments are supported (e.g. `install "my skill" --project`). Ignored when `script` is provided. |
 | `script` | ❌ | — | Shell script to run with rolecraft pre-installed. Alternative to `command` — use for dynamic/multi-step workflows. |
 | `version` | ❌ | `latest` | RoleCraft version to install (`latest`, `1.6.0`, `2.0.0`, etc.) |
 
